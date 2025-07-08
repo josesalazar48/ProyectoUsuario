@@ -155,8 +155,7 @@ private usuarios.Usuariocontroller us = new Usuariocontroller();
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        FrmIniciosesion login = new FrmIniciosesion(null, true);
-        login.setVisible(true);
+       
 
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -164,10 +163,6 @@ private usuarios.Usuariocontroller us = new Usuariocontroller();
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         guardar();
-        FrmIniciosesion login = new FrmIniciosesion(null, true);
-        login.setVisible(true);
-
-        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
