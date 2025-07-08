@@ -21,18 +21,24 @@ private usuarios.Usuariocontroller us = new Usuariocontroller();
         initComponents();
     }
     private void guardar(){
-        if(txtusuario.getText().isEmpty() || txtcontraseña.getText().isEmpty() || txtconfirmar.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null, "Llene todo los campos", "Error", JOptionPane.ERROR_MESSAGE);
+        if(txtusuario.getText().isEmpty() || txtcontraseña.getText().isEmpty() || 
+                txtconfirmar.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Llene todo los campos", 
+                    "Error", JOptionPane.ERROR_MESSAGE);
         }else if(!txtcontraseña.getText().equals(txtconfirmar.getText()   )){
-         JOptionPane.showMessageDialog(null, "Las contraseñas no coinciden","Error", JOptionPane.ERROR_MESSAGE);
+         JOptionPane.showMessageDialog(null, "Las contraseñas no coinciden",
+                 "Error", JOptionPane.ERROR_MESSAGE);
         }
         else{
-            if(us.guardarUsuario(txtusuario.getText(), txtcontraseña.getText(), txtconfirmar.getText())){
-              JOptionPane.showMessageDialog(null, "Se ha registrado correctamente", "Succes", JOptionPane.INFORMATION_MESSAGE);
+            if(us.guardarUsuario(txtusuario.getText(), txtcontraseña.getText(), 
+                    txtconfirmar.getText())){
+              JOptionPane.showMessageDialog(null, "Se ha registrado correctamente", 
+                      "Succes", JOptionPane.INFORMATION_MESSAGE);
               this.dispose();
             }
             else{
-               JOptionPane.showMessageDialog(null, "El usuario ya existe", "Error", JOptionPane.ERROR_MESSAGE); 
+               JOptionPane.showMessageDialog(null, "El usuario ya existe", 
+                       "Error", JOptionPane.ERROR_MESSAGE); 
             }
         }
        

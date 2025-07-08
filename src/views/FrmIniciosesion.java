@@ -22,14 +22,17 @@ private usuarios.Usuariocontroller us = new Usuariocontroller();
     }
     private void iniciarSesion(){
         if(txtusuario.getText().isEmpty() || txtclave.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null, "Llene todo los campos", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Llene todo los campos", "Error", 
+                    JOptionPane.ERROR_MESSAGE);
         }
         else{
             if(us.iniciarSesion(txtusuario.getText(), txtclave.getText())){
-              JOptionPane.showMessageDialog(null, "Datos correctos", "Succes", JOptionPane.INFORMATION_MESSAGE);
+              JOptionPane.showMessageDialog(null, "Datos correctos", 
+                      "Succes", JOptionPane.INFORMATION_MESSAGE);
             }
             else {
-            JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos",
+                    "Error", JOptionPane.ERROR_MESSAGE);
         }
            
         }
