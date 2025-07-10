@@ -33,20 +33,30 @@ public class Utilidades {
         escribir.close();
     }
 
-   
-    public List<String> readLines(String name_file) throws IOException {
-        List<String> lines = new ArrayList<>();
-        File file = new File(path + File.separatorChar + name_file);
-        if (!file.exists()) {
-            return lines;
-        }
-
-        BufferedReader br = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = br.readLine()) != null) {
-            lines.add(line);
-        }
-        br.close();
-        return lines;
+    public String[] readLines(String name_file) throws IOException {
+    File file = new File(path + File.separatorChar + name_file);
+    if (!file.exists()) {
+        return new String[0]; // Retorna arreglo vacío si no existe
     }
+
+    // PRIMERA PASADA: contar líneas
+    int lineCount = 0;
+    BufferedReader br1 = new BufferedReader(new FileReader(file));
+    while (br1.readLine() != null) {
+        lineCount++;
+    }
+    br1.close();
+
+    // SEGUNDA PASADA: leer y llenar el arreglo
+    String[] resultado = new String[lineCount];
+    BufferedReader br2 = new BufferedReader(new FileReader(file));
+    String line;
+    int index = 0;
+    while ((line = br2.readLine()) != null) {
+        resultado[index++] = line;
+    }
+    br2.close();
+
+    return resultado;
+}
 }

@@ -29,8 +29,8 @@ public class Usuariocontroller {
     }
      public boolean existeUsuario(String usuario) {
        try {
-        List<String> lines = u.readLines(file_name);
-        for (String line : lines) {
+           String[] archivoLeido = u.readLines(file_name);
+        for (String line : archivoLeido) {
             String[] partes = line.split("\t");
             if (partes.length >= 1 && partes[0].equalsIgnoreCase(usuario)) {
                 return true;
@@ -43,8 +43,8 @@ public class Usuariocontroller {
      }
      public boolean iniciarSesion(String Usuario, String clave){
          try {
-        List<String> lines = u.readLines(file_name);
-        for (String line : lines) {
+             String[] archivoLeido = u.readLines(file_name);
+        for (String line : archivoLeido) {
             String[] partes = line.split("\t");
             if (partes.length >= 2) {
                 String usuarioGuardado = partes[0].trim();
