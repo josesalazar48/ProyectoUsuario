@@ -144,7 +144,7 @@ private usuarios.Usuariocontroller us = new Usuariocontroller();
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-       FrmUsuario registro = new FrmUsuario(null, true); // true = modal
+       FrmUsuario registro = new FrmUsuario(null, true); 
     registro.setVisible(true);  
     }//GEN-LAST:event_jButton3ActionPerformed
 

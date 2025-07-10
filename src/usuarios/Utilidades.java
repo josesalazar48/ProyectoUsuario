@@ -51,9 +51,9 @@ public class Utilidades {
     String[] resultado = new String[lineCount];
     BufferedReader br2 = new BufferedReader(new FileReader(file));
     String line;
-    int index = 0;
+    int cont = 0;
     while ((line = br2.readLine()) != null) {
-        resultado[index++] = line;
+        resultado[cont++] = line;
     }
     br2.close();
 
